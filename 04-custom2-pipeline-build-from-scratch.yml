@@ -30,6 +30,7 @@ stages:
             Dockerfile: '**/Git-Repository-files/Dockerfile'
             tags: |
               $(tag)
+              $(Build.SourceVersion)
         # Task-2: Copy kube-manifest files to Build Artifact Directory
         # Task-3: Publish build articats to Azure Pipelines
         # Pipeline Hierarchial Flow: Stages -> Stage -> Jobs -> Job -> Steps -> Task1, Task2, Task3
